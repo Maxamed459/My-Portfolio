@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: sync;
+  src: url(../src/assets/fonts/Syne-VariableFont_wght.ttf);
+}
+
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+  }
+}
+@theme {
+  --font-sync: sync, "sans-serif";
+}
