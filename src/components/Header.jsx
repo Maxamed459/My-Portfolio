@@ -15,9 +15,9 @@ const Header = () => {
 
     return (
         <header className="sticky top-0 z-50">
-            <nav className="py-3 flex justify-between bg-white items-center max-w-6xl mx-auto">
+            <nav className="py-3 px-3 md:px-0 flex justify-between bg-white items-center w-[90%] lg:max-w-6xl mx-auto">
                 <Link to="/" className="flex items-center gap-2">
-                    <img src={Logo} className="h-12 w-auto" alt="logo" />
+                    <img src={Logo} className="h-10 md:h-12 w-auto" alt="logo" />
                 </Link>
                 <div className="gap-6 hidden lg:flex">
                     <Link className="hover:text-[#3955E5] font-poppins font-medium" to="/about">
