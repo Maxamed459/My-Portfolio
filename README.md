@@ -32,7 +32,7 @@ Welcome to my portfolio project! This is a React-based application showcasing my
     ```
 4. Start the development server:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Usage
