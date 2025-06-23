@@ -5,7 +5,6 @@
   src: url(../src/assets/fonts/Syne-VariableFont_wght.ttf);
 }
 
-
 @layer utilities {
   .text-stroke {
     -webkit-text-stroke: 1px black;
