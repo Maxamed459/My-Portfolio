@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="bg-gray-100 container mx-auto py-10 m-10 rounded-[10px] flex flex-col justify-center items-center">
+    <div className="bg-gray-100 max-w-[90%] container mx-auto py-10 m-10 rounded-[10px] flex flex-col justify-center items-center">
       <h1 className="font-sync uppercase font-[500] text-[40px] md:text-[50px] lg:text-[80px] text-center">
         I'am <span className="text-stroke">Mohamed</span> Mahdi
       </h1>

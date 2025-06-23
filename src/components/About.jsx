@@ -7,7 +7,7 @@ const Home = () => {
       id="about"
       className="flex flex-col lg:flex-row justify-center py-20 gap-5 items-center container mx-auto"
     >
-      <div className="w-full lg:w-1/3 flex flex-col items-center rounded-[10px] p-9 border-[1px] border-slate-200">
+      <div className="max-w-[90%] lg:w-1/3 flex flex-col items-center rounded-[10px] p-9 border-[1px] border-slate-200">
         <img src={Me} className="w-full rounded-md" alt="my image" />
         <div className="mt-4 space-y-1 text-center">
           <h3 className="font-sync text-xl uppercase font-[500]">
@@ -44,7 +44,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="w-full lg:w-2/3 flex flex-col mt-8 lg:mt-0">
+      <div className="max-w-[90%] mx-auto lg:w-2/3 flex flex-col mt-8 lg:mt-0">
         <h2 className="text-3xl leading-[50px] lg:leading-[72px] lg:text-[55px] font-medium font-sync lg:mt-0">
           Hello, I’m Mohamed Mahdi,{" "}
           <span className="border-1 border-slate-300 px-[20px] ">
