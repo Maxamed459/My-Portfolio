@@ -16,34 +16,34 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white container mx-auto">
       <nav className="py-3 px-3 md:px-0 flex justify-between items-center mx-auto">
-        <Link to="/" className="flex items-center gap-2">
+        <a href="#" className="flex items-center gap-2">
           <img src={Logo} className="h-10 md:h-12 w-auto" alt="logo" />
-        </Link>
+        </a>
         <div className="gap-6 hidden lg:flex">
-          <Link
+          <a
             className="hover:text-[#3955E5] font-poppins font-medium"
-            to="#about"
+            href="#about"
           >
             About me
-          </Link>
-          <Link
+          </a>
+          <a
             className="hover:text-[#3955E5] font-poppins font-medium"
-            to="#projects"
+            href="#projects"
           >
             projects
-          </Link>
-          <Link
+          </a>
+          <a
             className="hover:text-[#3955E5] font-poppins font-medium"
-            to="#services"
+            href="#services"
           >
             Services
-          </Link>
-          <Link
+          </a>
+          <a
             className="hover:text-[#3955E5] font-poppins font-medium"
-            to="#Contacts"
+            href="#Contacts"
           >
             Contacts
-          </Link>
+          </a>
         </div>
         <button className="hidden lg:flex items-center gap-2 border border-gray-300 hover:border-gray-500 px-6 py-2 rounded-lg">
           <i className="fa-solid fa-right-to-bracket text-[#3955E5]"></i>
@@ -59,47 +59,47 @@ const Header = () => {
         {isNavOpen && (
           <div className="fixed z-10 lg:hidden inset-0 container mx-auto py-3 px-7 bg-white">
             <div className="flex justify-between items-center">
-              <Link
+              <a
                 onClick={menuItemHandler}
-                to="/"
+                href="#hero"
                 className="flex items-center gap-2"
               >
                 <img src={Logo} className="h-10 w-auto" alt="logo" />
-              </Link>
+              </a>
               <button onClick={navHandler} className="lg:hidden">
                 <i className="fa-solid fa-xmark text-gray-600 text-3xl"></i>
               </button>
             </div>
 
             <div className="mt-6">
-              <Link
+              <a
                 onClick={menuItemHandler}
                 className="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg"
-                to="#about"
+                href="#about"
               >
                 about
-              </Link>
-              <Link
+              </a>
+              <a
                 onClick={menuItemHandler}
                 className="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg"
-                to="#projects"
+                href="#projects"
               >
                 projects
-              </Link>
-              <Link
+              </a>
+              <a
                 onClick={menuItemHandler}
                 className="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg"
-                to="#services"
+                href="#services"
               >
                 services
-              </Link>
-              <Link
+              </a>
+              <a
                 onClick={menuItemHandler}
                 className="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg"
-                to="#Contacts"
+                href="#Contacts"
               >
                 Contacts
-              </Link>
+              </a>
             </div>
 
             <div className="h-[1px] bg-gray-300"></div>

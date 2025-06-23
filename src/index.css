@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: sync;
   src: url(../src/assets/fonts/Syne-VariableFont_wght.ttf);

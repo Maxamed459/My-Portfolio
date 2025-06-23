@@ -3,7 +3,10 @@ import Me from "../assets/me.jpg";
 
 const Home = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center py-20 gap-5 items-center container mx-auto">
+    <div
+      id="about"
+      className="flex flex-col lg:flex-row justify-center py-20 gap-5 items-center container mx-auto"
+    >
       <div className="w-full lg:w-1/3 flex flex-col items-center rounded-[10px] p-9 border-[1px] border-slate-200">
         <img src={Me} className="w-full rounded-md" alt="my image" />
         <div className="mt-4 space-y-1 text-center">

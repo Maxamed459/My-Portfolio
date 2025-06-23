@@ -7,8 +7,12 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <About />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="about">
+        <About />
+      </section>
     </>
   );
 };
