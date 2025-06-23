@@ -14,8 +14,8 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50">
-      <nav className="py-3 px-3 md:px-0 flex justify-between bg-white items-center w-[90%] lg:max-w-6xl mx-auto">
+    <header className="sticky top-0 z-50 bg-white container mx-auto">
+      <nav className="py-3 px-3 md:px-0 flex justify-between items-center mx-auto">
         <Link to="/" className="flex items-center gap-2">
           <img src={Logo} className="h-10 md:h-12 w-auto" alt="logo" />
         </Link>
@@ -57,7 +57,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isNavOpen && (
-          <div className="fixed z-10 lg:hidden inset-0 py-3 px-7 bg-white">
+          <div className="fixed z-10 lg:hidden inset-0 container mx-auto py-3 px-7 bg-white">
             <div className="flex justify-between items-center">
               <Link
                 onClick={menuItemHandler}
