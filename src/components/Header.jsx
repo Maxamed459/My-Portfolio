@@ -1,8 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Logo from "../assets/myLogo-02.png";
 
 const Header = () => {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const navHandler = () => {
@@ -14,39 +28,43 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white container mx-auto">
-      <nav className="py-3 px-3 md:px-0 flex justify-between items-center mx-auto">
+    <header
+      className={`sticky top-0 z-50 bg-white shadow-md mx-auto ${
+        hasScrolled ? "shadow-md" : "shadow-none"
+      }`}
+    >
+      <nav className="py-3 px-3 md:px-0 flex container justify-between items-center mx-auto">
         <a href="#" className="flex items-center gap-2">
           <img src={Logo} className="h-10 md:h-12 w-auto" alt="logo" />
         </a>
         <div className="gap-6 hidden lg:flex">
           <a
-            className="hover:text-[#3955E5] font-poppins font-medium"
+            className="hover:text-[#000b58] font-poppins font-medium"
             href="#about"
           >
             About me
           </a>
           <a
-            className="hover:text-[#3955E5] font-poppins font-medium"
+            className="hover:text-[#000b58] font-poppins font-medium"
             href="#projects"
           >
             projects
           </a>
           <a
-            className="hover:text-[#3955E5] font-poppins font-medium"
+            className="hover:text-[#000b58] font-poppins font-medium"
             href="#services"
           >
             Services
           </a>
           <a
-            className="hover:text-[#3955E5] font-poppins font-medium"
+            className="hover:text-[#000b58] font-poppins font-medium"
             href="#Contacts"
           >
             Contacts
           </a>
         </div>
         <button className="hidden lg:flex items-center gap-2 border border-gray-300 hover:border-gray-500 px-6 py-2 rounded-lg">
-          <i className="fa-solid fa-right-to-bracket text-[#3955E5]"></i>
+          <i className="fa-solid fa-right-to-bracket text-[#000b58]"></i>
           <span>Hire Me</span>
         </button>
 
@@ -104,7 +122,7 @@ const Header = () => {
 
             <div className="h-[1px] bg-gray-300"></div>
             <button className="w-full flex mt-6 items-center gap-2 hover:bg-gray-50 px-6 py-2 rounded-lg">
-              <i className="fa-solid fa-right-to-bracket text-[#3955E5]"></i>
+              <i className="fa-solid fa-right-to-bracket text-[#000b58]"></i>
               <span>Hire Me</span>
             </button>
           </div>
