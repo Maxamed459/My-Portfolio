@@ -15,10 +15,10 @@ const Home = () => {
           </h3>
           <p className="flex items-center justify-center mx-auto p-2 rounded-full border-1">
             Available for Work
-            <div
-              className="w-2 h-2 mt-[3px] bg-[#00FF00] rounded-full mx-2"
+            <span
+              className="w-2 h-2 mt-[2px] bg-[#00FF00] rounded-full mx-2"
               id="available"
-            ></div>
+            ></span>
           </p>
         </div>
         <div className="flex items-center space-x-4">
@@ -52,34 +52,34 @@ const Home = () => {
           </span>{" "}
           and UX / UI Designer Based in Mogadishu.
         </h2>
-        <button className="w-[220px] px-6 py-3 text-center bg-black text-white ring-1 ring-black hover:bg-transparent hover:text-black duration-500 mt-8">
+        <button className="w-[220px] px-6 py-3 text-center bg-[#000b58] text-white ring-1 ring-black hover:bg-transparent hover:text-black duration-500 mt-8">
           Download cv
         </button>
         <div className="grid grid-cols-2 gap-4 mt-8">
           <p className="flex items-center gap-2 text-gray-500">
-            <i class="fa-solid fa-laptop-code"></i>
+            <i className="fa-solid fa-laptop-code text-[#000b58]"></i>
             Fullstack web development
           </p>
           <p className="flex items-center gap-2 text-gray-500">
             <span>
-              <i class="fa-solid fa-pen-nib"></i>
+              <i className="fa-solid fa-pen-nib text-[#000b58]"></i>
             </span>
             Logo Design
           </p>
           <p className="flex items-center gap-2 text-gray-500">
-            <i class="fa-regular fa-id-badge"></i>
+            <i className="fa-regular fa-id-badge text-[#000b58]"></i>
             Branding Identity
           </p>
           <p className="flex items-center gap-2 text-gray-500">
-            <i class="fa-solid fa-window-restore"></i>
+            <i className="fa-solid fa-window-restore text-[#000b58]"></i>
             Web Design
           </p>
           <p className="flex items-center gap-2 text-gray-500">
-            <i class="fa-solid fa-photo-film"></i>
+            <i className="fa-solid fa-photo-film text-[#000b58]"></i>
             Social Marketing
           </p>
           <p className="flex items-center gap-2 text-gray-500">
-            <i class="fa-brands fa-product-hunt"></i>
+            <i className="fa-brands fa-product-hunt text-[#000b58]"></i>
             Product Design
           </p>
         </div>
