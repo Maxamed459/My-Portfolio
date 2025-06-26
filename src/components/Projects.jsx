@@ -1,25 +1,31 @@
 import React from "react";
 import me from "../assets/me.jpg";
+import chatApp from "../assets/chatApp.jpg";
+import realState from "../assets/realState.jpg";
+import nutritionApp from "../assets/nutritionApp.jpg";
 
 const Projects = () => {
   const info = [
     {
-      img: me,
+      img: chatApp,
       type: "Chat App",
       name: "SIU Connect",
+      role: "Full Stack Developer",
       Demo: "https://fect-chat-app.vercel.app/",
     },
     {
-      img: me,
+      img: realState,
       type: "Website",
       name: "moha-real-state",
+      role: "Full Stack Developer",
       Demo: "https://moha-real-state.netlify.app/",
     },
     {
-      img: me,
-      type: "Website",
-      name: "moha-real-state",
-      Demo: "https://moha-real-state.netlify.app/",
+      img: nutritionApp,
+      type: "Food tracker App",
+      name: "sola-delta",
+      role: "Frontend Development participation",
+      Demo: "https://sola-delta.vercel.app/",
     },
     {
       img: me,
@@ -70,6 +76,9 @@ const Projects = () => {
             <div className="p-4 border-1 border-gray-300 rounded-xl rounded-t-none border-t-0">
               <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
               <p className="text-gray-600 mb-4">{project.type}</p>
+              <p className="mb-4 border-l-3 border-[#000b58] p-2 text-[#000b58] font-sync">
+                {project.role}
+              </p>
             </div>
           </div>
         ))}
