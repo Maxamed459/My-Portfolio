@@ -71,6 +71,8 @@ const Projects = () => {
               />
               <a
                 href={project.Demo}
+                target="_blank"
+                rel="noopener"
                 className="text-white font-sync text-xl absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
                 <i className="fas fa-eye mr-2 text-white"></i>
@@ -88,6 +90,8 @@ const Projects = () => {
                 <a
                   href={project.Demo}
                   className="bg-[#000b58] text-white px-4 py-2 rounded hover:bg-[#000b58]/80 transition-colors duration-300"
+                  target="_blank"
+                  rel="noopener"
                 >
                   View Demo
                 </a>
