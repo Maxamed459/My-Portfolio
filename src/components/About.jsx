@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div
       id="about"
-      className="flex flex-col lg:flex-row justify-center py-20 gap-5 items-center container mx-auto"
+      className="flex flex-col lg:flex-row justify-center py-20 gap-5 container mx-auto"
     >
       <div className="max-w-[90%] lg:w-1/3 flex flex-col items-center rounded-[10px] p-9 border-[1px] border-slate-200">
         <img src={Me} className="w-full rounded-md" alt="my image" />
@@ -45,12 +45,14 @@ const Home = () => {
         </div>
       </div>
       <div className="max-w-[90%] mx-auto lg:w-2/3 flex flex-col mt-8 lg:mt-0">
-        <h2 className="text-3xl leading-[50px] lg:leading-[72px] lg:text-[50px] font-medium font-sync lg:mt-0">
-          Hello, I’m Mohamed Mahdi,{" "}
+        <h2 className="text-3xl leading-[50px] lg:leading-[50px] lg:text-[40px] font-medium font-sync lg:mt-0">
+          I'm Mohamed Mahdi – a Mogadishu-based
           <span className="border-1 border-slate-300 px-[20px] ">
             Full-Stack Developer
           </span>{" "}
-          Building Solutions for Somalia's Digital Future Based in Mogadishu.
+          passionate about building scalable digital solutions for Somalia's
+          tech ecosystem. I combine cutting-edge technologies with local context
+          to drive meaningful change.
         </h2>
         <button className="w-[220px] px-6 py-3 text-center bg-[#000b58] text-white ring-1 ring-black hover:bg-transparent hover:text-black duration-500 mt-8">
           Download cv
