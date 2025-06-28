@@ -87,7 +87,7 @@ const Projects = () => {
               <p className="mb-4 border-l-3 border-[#000b58] p-2 text-[#000b58] font-sync">
                 {project.role}
               </p>
-              <button className="demoButton mb-4 block lg:hidden">
+              <button className="mb-4 block lg:hidden">
                 <a
                   href={project.Demo}
                   className="bg-[#000b58] text-white px-4 py-2 rounded hover:bg-[#000b58]/80 transition-colors duration-300"
