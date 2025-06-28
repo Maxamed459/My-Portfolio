@@ -3,6 +3,8 @@ import me from "../assets/me.jpg";
 import chatApp from "../assets/chatApp.jpg";
 import realState from "../assets/realState.jpg";
 import nutritionApp from "../assets/nutritionApp.jpg";
+import landingPage from "../assets/landingPage.jpg";
+import moviesApp from "../assets/moviesApp.jpg";
 
 const Projects = () => {
   const info = [
@@ -28,21 +30,24 @@ const Projects = () => {
       Demo: "https://sola-delta.vercel.app/",
     },
     {
-      img: me,
-      type: "Website",
-      name: "moha-real-state",
-      Demo: "https://moha-real-state.netlify.app/",
+      img: landingPage,
+      type: "Landing Page",
+      name: "landing-groupe",
+      role: "Frontend Developer",
+      Demo: "https://landing-groupe.netlify.app/",
+    },
+    {
+      img: moviesApp,
+      type: "Movies Website",
+      name: "moha-movies",
+      role: "Full Stack Developer",
+      Demo: "https://moha-movies.netlify.app/",
     },
     {
       img: me,
       type: "Website",
       name: "moha-real-state",
-      Demo: "https://moha-real-state.netlify.app/",
-    },
-    {
-      img: me,
-      type: "Website",
-      name: "moha-real-state",
+      role: "Full Stack Developer",
       Demo: "https://moha-real-state.netlify.app/",
     },
   ];
@@ -79,6 +84,14 @@ const Projects = () => {
               <p className="mb-4 border-l-3 border-[#000b58] p-2 text-[#000b58] font-sync">
                 {project.role}
               </p>
+              <button className="demoButton mb-4 block lg:hidden">
+                <a
+                  href={project.Demo}
+                  className="bg-[#000b58] text-white px-4 py-2 rounded hover:bg-[#000b58]/80 transition-colors duration-300"
+                >
+                  View Demo
+                </a>
+              </button>
             </div>
           </div>
         ))}
