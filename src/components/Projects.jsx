@@ -5,6 +5,7 @@ import realState from "../assets/realState.jpg";
 import nutritionApp from "../assets/nutritionApp.jpg";
 import landingPage from "../assets/landingPage.jpg";
 import moviesApp from "../assets/moviesApp.jpg";
+import todoApp from "../assets/todoApp.jpg";
 
 const Projects = () => {
   const info = [
@@ -44,11 +45,11 @@ const Projects = () => {
       Demo: "https://moha-movies.netlify.app/",
     },
     {
-      img: me,
-      type: "Website",
-      name: "moha-real-state",
+      img: todoApp,
+      type: "Todo App",
+      name: "todo-app",
       role: "Full Stack Developer",
-      Demo: "https://moha-real-state.netlify.app/",
+      Demo: "https://todo-app-virid-omega-45.vercel.app/",
     },
   ];
 
