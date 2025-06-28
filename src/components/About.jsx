@@ -13,13 +13,14 @@ const Home = () => {
           <h3 className="font-sync text-xl uppercase font-[500]">
             Mohamed Mahdi
           </h3>
-          <p className="flex items-center justify-center mx-auto p-2 rounded-full border-1">
-            Available for Work
-            <span
-              className="w-2 h-2 mt-[2px] bg-[#00FF00] rounded-full mx-2"
-              id="available"
-            ></span>
-          </p>
+          <button className="border-1 border-slate-200 px-4 py-2 mt-4 text-gray-500 rounded-full flex items-center gap-3 p-3 cursor-pointer hover:scale-105 transition-all duration-400">
+            <div className="relative flex items-center justify-center h-5 w-5 rounded-full">
+              <span className="rounded-full h-3 w-3 bg-green-400"></span>
+              <span className="animate-ping absolute rounded-full h-4 w-4 bg-green-400"></span>
+              <span className="animate-ping absolute rounded-full h-full w-full bg-green-400"></span>
+            </div>
+            <p>Available for Work</p>
+          </button>
         </div>
         <div className="flex items-center space-x-4">
           <button className="border-1 border-slate-200 rounded-md px-4 py-2 mt-4 group">
