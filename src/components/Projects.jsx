@@ -94,6 +94,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener"
                 >
+                  <i className="fas fa-eye mr-2 text-white"></i>
                   View Demo
                 </a>
               </button>
