@@ -65,7 +65,13 @@ const Header = () => {
         </div>
         <button className="hidden lg:flex items-center gap-2 border border-gray-300 hover:border-gray-500 px-6 py-2 rounded-lg">
           <i className="fa-solid fa-right-to-bracket text-[#000b58]"></i>
-          <span>Hire Me</span>
+          <a
+            href="/Maxamed_Mahdi_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hire Me
+          </a>
         </button>
 
         {/* Mobile Menu Button */}
@@ -123,7 +129,13 @@ const Header = () => {
             <div className="h-[1px] bg-gray-300"></div>
             <button className="w-full flex mt-6 items-center gap-2 hover:bg-gray-50 px-6 py-2 rounded-lg">
               <i className="fa-solid fa-right-to-bracket text-[#000b58]"></i>
-              <span>Hire Me</span>
+              <a
+                href="/Maxamed_Mahdi_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hire Me
+              </a>
             </button>
           </div>
         )}
