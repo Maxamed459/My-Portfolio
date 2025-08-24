@@ -1,11 +1,16 @@
 import React from "react";
-import me from "../assets/me.jpg";
 import chatApp from "../assets/chatApp.jpg";
 import realState from "../assets/realState.jpg";
 import nutritionApp from "../assets/nutritionApp.jpg";
 import landingPage from "../assets/landingPage.jpg";
 import moviesApp from "../assets/moviesApp.jpg";
 import todoApp from "../assets/todoApp.jpg";
+import next_movie_app from "../assets/next-movie-app.png";
+import { FaCss3Alt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
+import { SiExpress, SiMongodb, SiSocketdotio } from "react-icons/si";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { IoLogoJavascript } from "react-icons/io";
+import { MdLocalMovies } from "react-icons/md";
 
 const Projects = () => {
   const info = [
@@ -15,6 +20,14 @@ const Projects = () => {
       name: "SIU Connect",
       role: "Full Stack Developer",
       Demo: "https://fect-chat-app.vercel.app/",
+      tech: [
+        FaReact,
+        FaNodeJs,
+        SiExpress,
+        SiSocketdotio,
+        SiMongodb,
+        RiTailwindCssFill,
+      ],
     },
     {
       img: realState,
@@ -22,6 +35,7 @@ const Projects = () => {
       name: "moha-real-state",
       role: "Full Stack Developer",
       Demo: "https://moha-real-state.netlify.app/",
+      tech: [FaReact, RiTailwindCssFill],
     },
     {
       img: nutritionApp,
@@ -29,6 +43,15 @@ const Projects = () => {
       name: "sola-delta",
       role: "Frontend Development participation",
       Demo: "https://sola-delta.vercel.app/",
+      tech: [FaReact, FaNodeJs, SiExpress, SiMongodb, RiTailwindCssFill],
+    },
+    {
+      img: next_movie_app,
+      type: "movie App",
+      name: "Next Movie App",
+      role: "Frontend Developer",
+      Demo: "https://next-movie-app-bquj.vercel.app/",
+      tech: [RiNextjsFill, FaReact, RiTailwindCssFill, MdLocalMovies],
     },
     {
       img: landingPage,
@@ -36,6 +59,7 @@ const Projects = () => {
       name: "landing-groupe",
       role: "Frontend Developer",
       Demo: "https://landing-groupe.netlify.app/",
+      tech: [FaHtml5, RiTailwindCssFill],
     },
     {
       img: moviesApp,
@@ -43,6 +67,7 @@ const Projects = () => {
       name: "moha-movies",
       role: "Full Stack Developer",
       Demo: "https://moha-movies.netlify.app/",
+      tech: [FaHtml5, IoLogoJavascript, FaCss3Alt],
     },
     {
       img: todoApp,
@@ -50,6 +75,7 @@ const Projects = () => {
       name: "todo-app",
       role: "Full Stack Developer",
       Demo: "https://todo-app-virid-omega-45.vercel.app/",
+      tech: [FaReact, RiTailwindCssFill],
     },
   ];
 
@@ -98,6 +124,18 @@ const Projects = () => {
                   View Demo
                 </a>
               </button>
+              <div>
+                <ul className="flex flex-wrap gap-2 p-4">
+                  {project.tech.map((Icon, idx) => (
+                    <li
+                      key={idx}
+                      className="text-2xl text-gray-600 hover:text-[#000b58] transition-colors duration-300"
+                    >
+                      <Icon />
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         ))}
