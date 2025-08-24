@@ -56,7 +56,13 @@ const Home = () => {
           to drive meaningful change.
         </h2>
         <button className="w-[220px] px-6 py-3 text-center bg-[#000b58] text-white ring-1 ring-black hover:bg-transparent hover:text-black duration-500 mt-8">
-          Download cv
+          <a
+            href="/Maxamed_Mahdi_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View My CV
+          </a>
         </button>
         <div className="grid grid-cols-2 gap-4 mt-8">
           <p className="flex items-center gap-2 text-gray-500">
