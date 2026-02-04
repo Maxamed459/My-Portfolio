@@ -1,59 +1,83 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+@theme {
+  --color-primary: #000b58;
+  --color-accent: #ffdb5a;
+  --color-accent-hover: #fcd34d;
+  --color-secondary: #1a2a6c;
+  
+  --font-sync: sync, "sans-serif";
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.1);
+    --header-bg: rgba(248, 250, 252, 0.8);
+    --glow-opacity: 0.1;
+  }
+
+  .dark {
+    --bg-color: #00052c;
+    --text-color: #f1f5f9;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --header-bg: rgba(0, 11, 88, 0.8);
+    --glow-opacity: 0.2;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-inter);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sync);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+  }
+
+  
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .dark .text-gradient {
+    background: linear-gradient(135deg, #fff, var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glow {
+    box-shadow: 0 0 20px rgba(255, 219, 90, var(--glow-opacity));
+  }
 }
 
 @font-face {
   font-family: sync;
-  src: url(../src/assets/fonts/Syne-VariableFont_wght.ttf);
-}
-
-@layer utilities {
-  .text-stroke {
-    -webkit-text-stroke: 1px black;
-    color: transparent;
-  }
-  .container {
-    width: 100%;
-  }
-
-  @media (min-width: 576px) {
-    .container,
-    .container-sm {
-      max-width: 540px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .container,
-    .container-md,
-    .container-sm {
-      max-width: 720px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm {
-      max-width: 960px;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .container,
-    .container-xl,
-    .container-lg,
-    .container-md,
-    .container-sm {
-      max-width: 1140px;
-    }
-  }
-}
-@theme {
-  --font-sync: sync, "sans-serif";
+  src: url(./assets/fonts/Syne-VariableFont_wght.ttf);
 }
 
 #available {
