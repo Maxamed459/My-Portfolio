@@ -1,100 +1,124 @@
-import React from "react";
-import Me from "../assets/me.jpg";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Twitter, Facebook, ExternalLink, Download, Code, Palette, Briefcase, Globe } from "lucide-react";
+import Me from "../assets/me.jpeg";
 
-const Home = () => {
+const About = () => {
+  const socialLinks = [
+    { icon: Github, href: "https://github.com/Maxamed459", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/maxamed-mahdi-126a702aa/", label: "LinkedIn" },
+    { icon: Twitter, href: "https://x.com/wll__moh4", label: "Twitter" },
+    { icon: Facebook, href: "https://www.facebook.com/wll.moh4", label: "Facebook" },
+  ];
+
+  const services = [
+    { icon: Code, title: "Fullstack Development", desc: "Building scalable web apps" },
+    { icon: Palette, title: "Web Design", desc: "Crafting beautiful interfaces" },
+    { icon: Globe, title: "Mobile App", desc: "Building mobile applications" },
+    { icon: Briefcase, title: "Product Design", desc: "End-to-end product strategy" },
+  ];
+
   return (
-    <div
-      id="about"
-      className="flex flex-col lg:flex-row justify-center py-20 gap-5 container mx-auto"
-    >
-      <div className="max-w-[90%] mx-auto lg:w-1/3 flex flex-col items-center rounded-[10px] p-9 border-[1px] border-slate-200">
-        <img src={Me} className="w-full rounded-md" alt="my image" />
-        <div className="mt-4 space-y-1 text-center">
-          <h3 className="font-sync text-xl uppercase font-[500]">
-            Mohamed Mahdi
-          </h3>
-          <button className="border-1 border-slate-200 px-4 py-2 mt-4 text-gray-500 rounded-full flex items-center gap-3 p-3 cursor-pointer hover:scale-105 transition-all duration-400">
-            <div className="relative flex items-center justify-center h-5 w-5 rounded-full">
-              <span className="rounded-full h-3 w-3 bg-green-400"></span>
-              <span className="animate-ping absolute rounded-full h-4 w-4 bg-green-400"></span>
-              <span className="animate-ping absolute rounded-full h-full w-full bg-green-400"></span>
-            </div>
-            <p>Available for Work</p>
-          </button>
-        </div>
-        <div className="flex items-center space-x-4">
-          <button className="border-1 border-slate-200 rounded-md px-4 py-2 mt-4 group">
-            <a href="https://www.facebook.com/wll.moh4">
-              <i className="fa-brands fa-facebook text-xl opacity-70 group-hover:opacity-100 transition duration-300"></i>
-            </a>
-          </button>
-          <button className="border-1 border-slate-200 rounded-md px-4 py-2 mt-4 group">
-            <a href="https://github.com/Maxamed459">
-              <i className="fa-brands fa-github text-xl opacity-70 group-hover:opacity-100 transition duration-300"></i>
-            </a>
-          </button>
-          <button className="border-1 border-slate-200 rounded-md px-4 py-2 mt-4 group">
-            <a href="https://x.com/wll__moh4">
-              <i className="fa-brands fa-twitter text-xl opacity-70 group-hover:opacity-100 transition duration-300"></i>
-            </a>
-          </button>
-          <button className="border-1 border-slate-200 rounded-md px-4 py-2 mt-4 group">
-            <a href="https://www.linkedin.com/in/maxamed-mahdi-126a702aa/">
-              <i className="fa-brands fa-linkedin text-xl opacity-70 group-hover:opacity-100 transition duration-300"></i>
-            </a>
-          </button>
-        </div>
-      </div>
-      <div className="max-w-[90%] mx-auto lg:w-2/3 flex flex-col mt-8 lg:mt-0">
-        <h2 className="text-3xl leading-[50px] lg:leading-[50px] lg:text-[40px] font-medium font-sync lg:mt-0">
-          I'm Mohamed Mahdi – a Mogadishu-based
-          <span className="border-1 border-slate-300 px-[20px] ">
-            Full-Stack Developer
-          </span>{" "}
-          passionate about building scalable digital solutions for Somalia's
-          tech ecosystem. I combine cutting-edge technologies with local context
-          to drive meaningful change.
-        </h2>
-        <button className="w-[220px] px-6 py-3 text-center bg-[#000b58] text-white ring-1 ring-black hover:bg-transparent hover:text-black duration-500 mt-8">
-          <a
-            href="/Maxamed_Mahdi_CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+    <section id="about" className="py-24 relative overflow-hidden">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row gap-16 items-start">
+          
+          {/* Left Side: Profile Card */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="lg:w-1/3 w-full"
           >
-            View My CV
-          </a>
-        </button>
-        <div className="grid grid-cols-2 gap-4 mt-8">
-          <p className="flex items-center gap-2 text-gray-500">
-            <i className="fa-solid fa-laptop-code text-[#000b58]"></i>
-            Fullstack web development
-          </p>
-          <p className="flex items-center gap-2 text-gray-500">
-            <span>
-              <i className="fa-solid fa-pen-nib text-[#000b58]"></i>
-            </span>
-            Logo Design
-          </p>
-          <p className="flex items-center gap-2 text-gray-500">
-            <i className="fa-regular fa-id-badge text-[#000b58]"></i>
-            Branding Identity
-          </p>
-          <p className="flex items-center gap-2 text-gray-500">
-            <i className="fa-solid fa-window-restore text-[#000b58]"></i>
-            Web Design
-          </p>
-          <p className="flex items-center gap-2 text-gray-500">
-            <i className="fa-solid fa-photo-film text-[#000b58]"></i>
-            Social Marketing
-          </p>
-          <p className="flex items-center gap-2 text-gray-500">
-            <i className="fa-brands fa-product-hunt text-[#000b58]"></i>
-            Product Design
-          </p>
+            <div className="glass p-8 rounded-2xl relative group border-accent/20">
+              <div className="relative overflow-hidden rounded-xl mb-6">
+                <img src={Me} className="w-full grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105" alt="Maxamed Mahdi" />
+                <div className="absolute top-4 right-4">
+                  <span className="flex items-center gap-2 bg-green-500/20 backdrop-blur-md text-green-400 text-xs font-bold px-3 py-1.5 rounded-full border border-green-500/30">
+                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    Available for Work
+                  </span>
+                </div>
+              </div>
+
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-sync font-bold mb-1">MAXAMED MAHDI</h3>
+                <p className="text-accent font-medium">Full-Stack Developer</p>
+              </div>
+
+              <div className="flex justify-center gap-3">
+                {socialLinks.map((social, i) => (
+                  <a
+                    key={i}
+                    href={social.href}
+                    className="p-3 glass rounded-xl hover:bg-accent hover:text-primary transition-all group"
+                    aria-label={social.label}
+                  >
+                    <social.icon size={20} className="group-hover:scale-110 transition-transform" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Side: Content */}
+          <div className="lg:w-2/3 w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl lg:text-5xl font-sync font-bold leading-tight mb-8">
+                I'm Maxamed Mahdi – a Mogadishu-based 
+                <span className="text-accent underline decoration-accent/30 underline-offset-8 decoration-2 ml-3">Full-Stack Developer</span>
+              </h2>
+              
+              <p className="text-xl text-text-color/70 mb-10 leading-relaxed">
+                Passionate about building scalable digital solutions for Somalia's tech ecosystem. 
+                I combine cutting-edge technologies with local context to drive meaningful change 
+                and create high-impact web applications.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-12">
+                <a
+                  href="/Maxamed Mahdi.pdf"
+                  target="_blank"
+                  className="px-8 py-4 bg-primary dark:bg-accent text-white dark:text-primary font-bold rounded-2xl flex items-center gap-2 hover:scale-105 transition-transform shadow-xl"
+                >
+                  <Download size={20} /> Download CV
+                </a>
+                <a
+                  href="#contact"
+                  className="px-8 py-4 glass text-text-color font-bold rounded-2xl flex items-center gap-2 hover:bg-accent hover:text-primary transition-all"
+                >
+                  Work with me <ExternalLink size={20} />
+                </a>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {services.map((service, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="p-6 glass rounded-3xl hover:border-accent/40 transition-colors group"
+                  >
+                    <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                      <service.icon size={24} className="text-accent" />
+                    </div>
+                    <h4 className="text-xl font-bold mb-2">{service.title}</h4>
+                    <p className="text-text-color/60">{service.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Home;
+export default About;
