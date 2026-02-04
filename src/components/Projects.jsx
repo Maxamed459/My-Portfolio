@@ -1,4 +1,5 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Eye } from "lucide-react";
 import chatApp from "../assets/chatApp.jpg";
 import realState from "../assets/realState.jpg";
 import nutritionApp from "../assets/nutritionApp.jpg";
@@ -6,141 +7,164 @@ import landingPage from "../assets/landingPage.jpg";
 import moviesApp from "../assets/moviesApp.jpg";
 import todoApp from "../assets/todoApp.jpg";
 import next_movie_app from "../assets/next-movie-app.png";
-import { FaCss3Alt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
-import { SiExpress, SiMongodb, SiSocketdotio } from "react-icons/si";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { IoLogoJavascript } from "react-icons/io";
-import { MdLocalMovies } from "react-icons/md";
 
 const Projects = () => {
-  const info = [
+  const projects = [
     {
       img: chatApp,
-      type: "Chat App",
-      name: "SIU Connect",
-      role: "Full Stack Developer",
-      Demo: "https://fect-chat-app.vercel.app/",
-      tech: [
-        FaReact,
-        FaNodeJs,
-        SiExpress,
-        SiSocketdotio,
-        SiMongodb,
-        RiTailwindCssFill,
-      ],
+      title: "SIU Connect",
+      desc: "A real-time chat application with group messaging and private chat functionality.",
+      tech: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
+      demo: "https://fect-chat-app.vercel.app/",
+      github: "https://github.com/Maxamed459",
     },
     {
       img: realState,
-      type: "Website",
-      name: "moha-real-state",
-      role: "Full Stack Developer",
-      Demo: "https://moha-real-state.netlify.app/",
-      tech: [FaReact, RiTailwindCssFill],
+      title: "Moha Real State",
+      desc: "A modern real estate platform for listing and browsing properties with advanced filtering.",
+      tech: ["React", "Tailwind CSS"],
+      demo: "https://moha-real-state.netlify.app/",
+      github: "https://github.com/Maxamed459",
     },
     {
       img: nutritionApp,
-      type: "Food tracker App",
-      name: "sola-delta",
-      role: "Frontend Development participation",
-      Demo: "https://sola-delta.vercel.app/",
-      tech: [FaReact, FaNodeJs, SiExpress, SiMongodb, RiTailwindCssFill],
+      title: "Sola Delta",
+      desc: "Food tracker and nutrition monitoring app to help users maintain a healthy lifestyle.",
+      tech: ["React", "Node.js", "Express", "MongoDB"],
+      demo: "https://sola-delta.vercel.app/",
+      github: "https://github.com/Maxamed459",
     },
     {
       img: next_movie_app,
-      type: "movie App",
-      name: "Next Movie App",
-      role: "Frontend Developer",
-      Demo: "https://next-movie-app-bquj.vercel.app/",
-      tech: [RiNextjsFill, FaReact, RiTailwindCssFill, MdLocalMovies],
+      title: "Next Movie App",
+      desc: "Vibrant movie discovery platform built with Next.js featuring high-performance searching.",
+      tech: ["Next.js", "React", "Tailwind CSS"],
+      demo: "https://next-movie-app-bquj.vercel.app/",
+      github: "https://github.com/Maxamed459",
     },
     {
       img: landingPage,
-      type: "Landing Page",
-      name: "landing-groupe",
-      role: "Frontend Developer",
-      Demo: "https://landing-groupe.netlify.app/",
-      tech: [FaHtml5, RiTailwindCssFill],
-    },
-    {
-      img: moviesApp,
-      type: "Movies Website",
-      name: "moha-movies",
-      role: "Full Stack Developer",
-      Demo: "https://moha-movies.netlify.app/",
-      tech: [FaHtml5, IoLogoJavascript, FaCss3Alt],
+      title: "Landing Groupe",
+      desc: "Corporate landing page focused on performance and modern design aesthetics.",
+      tech: ["HTML", "Tailwind CSS"],
+      demo: "https://landing-groupe.netlify.app/",
+      github: "https://github.com/Maxamed459",
     },
     {
       img: todoApp,
-      type: "Todo App",
-      name: "todo-app",
-      role: "Full Stack Developer",
-      Demo: "https://todo-app-virid-omega-45.vercel.app/",
-      tech: [FaReact, RiTailwindCssFill],
+      title: "TaskMaster",
+      desc: "A productive todo application with local storage persistence and intuitive drag-and-drop.",
+      tech: ["React", "Tailwind CSS"],
+      demo: "https://todo-app-virid-omega-45.vercel.app/",
+      github: "https://github.com/Maxamed459",
     },
   ];
 
   return (
-    <div className="container py-10 mx-auto">
-      <div className="text-center mb-10 space-y-5">
-        <h4 className="text-xl font-sync">Works</h4>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-sync mb-4">
-          Creative Portfolio
-        </h2>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {info.map((project, index) => (
-          <div key={index} className="bg-white overflow-hidden m-2 group ">
-            <div className="relative overflow-hidden">
-              <img
-                src={project.img}
-                alt="project image"
-                className="w-full object-cover group-hover:scale-103 transition-transform duration-300"
-              />
-              <a
-                href={project.Demo}
-                target="_blank"
-                rel="noopener"
-                className="text-white font-sync text-xl absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <i className="fas fa-eye mr-2 text-white"></i>
-                View Demo
-              </a>
-            </div>
+    <section id="projects" className="py-24 bg-card-bg/10">
+      <div className="container mx-auto px-6">
+        <div className="mb-16 text-center">
+          <motion.h4 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-accent font-bold tracking-widest uppercase mb-4"
+          >
+            Portfolio
+          </motion.h4>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl font-sync font-bold"
+          >
+            Featured <span className="text-gradient">Projects</span>
+          </motion.h2>
+        </div>
 
-            <div className="p-4 border-1 border-gray-300 rounded-xl rounded-t-none border-t-0">
-              <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-              <p className="text-gray-600 mb-4">{project.type}</p>
-              <p className="mb-4 border-l-3 border-[#000b58] p-2 text-[#000b58] font-sync">
-                {project.role}
-              </p>
-              <button className="mb-4 block lg:hidden">
-                <a
-                  href={project.Demo}
-                  className="bg-[#000b58] text-white px-4 py-2 rounded hover:bg-[#000b58]/80 transition-colors duration-300"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <i className="fas fa-eye mr-2 text-white"></i>
-                  View Demo
-                </a>
-              </button>
-              <div>
-                <ul className="flex flex-wrap gap-2 p-4">
-                  {project.tech.map((Icon, idx) => (
-                    <li
-                      key={idx}
-                      className="text-2xl text-gray-600 hover:text-[#000b58] transition-colors duration-300"
-                    >
-                      <Icon />
-                    </li>
-                  ))}
-                </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ y: -10 }}
+              className="glass rounded-2xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-all border-accent/10 hover:border-accent/30 group"
+            >
+              {/* Project Image */}
+              <div className="relative overflow-hidden h-60">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    className="p-3 bg-accent text-primary rounded-xl hover:scale-110 transition-transform"
+                    title="Live Demo"
+                  >
+                    <Eye size={24} />
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className="p-3 bg-white/20 backdrop-blur-md text-white rounded-xl hover:scale-110 transition-transform border border-white/30"
+                    title="GitHub"
+                  >
+                    <Github size={24} />
+                  </a>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
+
+              {/* Project Content */}
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-text-color/70 mb-6 line-clamp-3">
+                  {project.desc}
+                </p>
+                
+                <div className="mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {project.tech.map((tag, tIndex) => (
+                      <span
+                        key={tIndex}
+                        className="px-3 py-1 bg-accent/10 text-accent text-xs font-bold rounded-lg border border-accent/20"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-4">
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      className="flex-1 py-3 bg-accent text-primary font-bold rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-lg"
+                    >
+                      Demo <ExternalLink size={18} />
+                    </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="px-4 py-3 glass rounded-xl flex items-center justify-center hover:bg-white/5 transition-colors border-accent/10"
+                    >
+                      <Github size={20} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
