@@ -2,24 +2,24 @@ import React from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import Contacts from "../components/Contacts";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <>
+    <div className="min-h-screen">
       <Header />
-      <section id="hero">
+      <main>
         <Hero />
-      </section>
-      <section id="about">
         <About />
-      </section>
-      <section id="projects">
+        <Skills />
         <Projects />
-      </section>
-      <section id="services"></section>
-      <section id="contact"></section>
-    </>
+        <Contacts />
+      </main>
+      <Footer />
+    </div>
   );
 };
 
