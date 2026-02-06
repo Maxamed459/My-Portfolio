@@ -64,15 +64,15 @@ const Projects = () => {
     <section id="projects" className="py-24 bg-card-bg/10">
       <div className="container mx-auto px-6">
         <div className="mb-16 text-center">
-          <motion.h4 
+          <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-accent font-bold tracking-widest uppercase mb-4"
           >
             Portfolio
-          </motion.h4>
-          <motion.h2 
+          </motion.h2>
+          <motion.h3 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -80,7 +80,7 @@ const Projects = () => {
             className="text-4xl md:text-5xl font-sync font-bold"
           >
             Featured <span className="text-gradient">Projects</span>
-          </motion.h2>
+          </motion.h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,7 +98,7 @@ const Projects = () => {
               <div className="relative overflow-hidden h-60">
                 <img
                   src={project.img}
-                  alt={project.title}
+                  alt={`${project.title} - ${project.desc.substring(0, 50)}...`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">

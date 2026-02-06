@@ -39,15 +39,15 @@ const Skills = () => {
       
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <motion.h4 
+          <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-accent font-bold tracking-widest uppercase mb-4"
           >
             Capabilities
-          </motion.h4>
-          <motion.h2 
+          </motion.h2>
+          <motion.h3 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -55,7 +55,7 @@ const Skills = () => {
             className="text-4xl md:text-5xl font-sync font-bold"
           >
             Technical <span className="text-gradient">Proficiency</span>
-          </motion.h2>
+          </motion.h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

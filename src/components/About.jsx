@@ -50,6 +50,8 @@ const About = () => {
                   <a
                     key={i}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 glass rounded-xl hover:bg-accent hover:text-primary transition-all group"
                     aria-label={social.label}
                   >

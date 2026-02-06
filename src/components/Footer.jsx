@@ -22,15 +22,18 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex gap-4">
             {[
-              { icon: Github, href: "https://github.com/Maxamed459" },
-              { icon: Linkedin, href: "https://linkedin.com" },
-              { icon: Twitter, href: "https://twitter.com" },
-              { icon: Mail, href: "mailto:contact@example.com" },
+              { icon: Github, href: "https://github.com/Maxamed459", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/maxamed-mahdi-126a702aa/", label: "LinkedIn" },
+              { icon: Twitter, href: "https://x.com/wll__moh4", label: "Twitter" },
+              { icon: Mail, href: "mailto:maxamedmahdi459@gmail.com", label: "Email" },
             ].map((social, i) => (
               <a
                 key={i}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 glass rounded-xl hover:bg-accent hover:text-primary transition-all hover:scale-110"
+                aria-label={social.label}
               >
                 <social.icon size={20} />
               </a>

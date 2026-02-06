@@ -6,15 +6,15 @@ const Contacts = () => {
     <section id="contact" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <motion.h4 
+          <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-accent font-bold tracking-widest uppercase mb-4"
           >
             Get In Touch
-          </motion.h4>
-          <motion.h2 
+          </motion.h2>
+          <motion.h3 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -22,7 +22,7 @@ const Contacts = () => {
             className="text-4xl md:text-5xl font-sync font-bold"
           >
             Let's Build Something <span className="text-gradient">Together</span>
-          </motion.h2>
+          </motion.h3>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

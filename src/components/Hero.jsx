@@ -71,13 +71,16 @@ const Hero = () => {
             className="mt-16 flex justify-center gap-8"
           >
             {[
-              { icon: Github, href: "https://github.com/Maxamed459" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/maxamed-mahdi-126a702aa/" },
-              { icon: Mail, href: "mailto:[maxamedmahdi459@gmail.com]" },
+              { icon: Github, href: "https://github.com/Maxamed459", label: "GitHub Profile" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/maxamed-mahdi-126a702aa/", label: "LinkedIn Profile" },
+              { icon: Mail, href: "mailto:maxamedmahdi459@gmail.com", label: "Send Email" },
             ].map((social, i) => (
               <a
                 key={i}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
                 className="p-4 glass rounded-xl hover:bg-accent hover:text-primary transition-all hover:-translate-y-1"
               >
                 <social.icon size={28} />
