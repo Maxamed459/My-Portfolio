@@ -7,6 +7,9 @@ import landingPage from "../assets/landingPage.jpg";
 import moviesApp from "../assets/moviesApp.jpg";
 import todoApp from "../assets/todoApp.jpg";
 import next_movie_app from "../assets/next-movie-app.png";
+import bixidhiig from "../assets/bixi-dhiig.png"
+import taloplus from "../assets/talo-plus.png"
+import tasky from "../assets/tasky.png"
 
 const Projects = () => {
   const projects = [
@@ -17,6 +20,30 @@ const Projects = () => {
       tech: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
       demo: "https://fect-chat-app.vercel.app/",
       github: "https://github.com/Maxamed459",
+    },
+    {
+      img: bixidhiig,
+      title: "bixi-dhiig",
+      desc: "🩸 Blood Bank Management System A full-stack web app that connects donors, patients, staff, and admins to manage blood donation and requests. ✨ Features User registration & login (JWT) Role-based access (User, Staff, Admin) Request & approve blood donations Automatic email notifications to matching donors Track available blood types",
+      tech: ["React", "Next Js", "Node.js", "Express", "Postgresql", "Prisma", "Tailwind CSS", "shadcn/ui", "JWT", "Email Notifications", "Role-based access", "Nodemailer"],
+      demo: "https://bixi-dhiig.vercel.app/",
+      github: "https://github.com/Maxamed459/Blood-Bank-Management-system",
+    },
+    {
+      img: taloplus,
+      title: "talo-plus",
+      desc: "Talo+ is a full-stack healthcare Q&A platform inspired by StackOverflow, specifically designed for medical questions and answers. It allows users to post medical questions about symptoms or health concerns, and receive answers from medical professionals like doctors, nurses, medical students, pharmacists, and coaches.",
+      tech: ["React", "Next Js", "Node.js", "Express", "Postgresql", "Prisma", "Tailwind CSS", "shadcn/ui", "JWT", "Email Notifications", "Role-based access", "Nodemailer"],
+      demo: "https://talo-plus.vercel.app",
+      github: "https://github.com/Maxamed459/Talo-plus",
+    },
+    {
+      img: tasky,
+      title: "Tasky",
+      desc: "Welcome to Tasky Here you can track your tasks and see whether task is done or pending or undone it`s built very robust backend using Django Rest Framework for building API`s",
+      tech: ["React", "Next Js", "Django", "Django Rest Framework", "Simple JWT", "sqlite", "Tailwind CSS"],
+      demo: "https://github.com/Maxamed459/Task_Management_frontend",
+      github: "https://github.com/Maxamed459/Task_Management_backend",
     },
     {
       img: realState,
@@ -35,27 +62,11 @@ const Projects = () => {
       github: "https://github.com/Maxamed459",
     },
     {
-      img: next_movie_app,
-      title: "Next Movie App",
-      desc: "Vibrant movie discovery platform built with Next.js featuring high-performance searching.",
-      tech: ["Next.js", "React", "Tailwind CSS"],
-      demo: "https://next-movie-app-bquj.vercel.app/",
-      github: "https://github.com/Maxamed459",
-    },
-    {
       img: landingPage,
       title: "Landing Groupe",
       desc: "Corporate landing page focused on performance and modern design aesthetics.",
       tech: ["HTML", "Tailwind CSS"],
       demo: "https://landing-groupe.netlify.app/",
-      github: "https://github.com/Maxamed459",
-    },
-    {
-      img: todoApp,
-      title: "TaskMaster",
-      desc: "A productive todo application with local storage persistence and intuitive drag-and-drop.",
-      tech: ["React", "Tailwind CSS"],
-      demo: "https://todo-app-virid-omega-45.vercel.app/",
       github: "https://github.com/Maxamed459",
     },
   ];
